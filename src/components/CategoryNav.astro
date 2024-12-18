@@ -1,0 +1,23 @@
+---
+const categories = [
+    { name: 'General', href: '/articles/general' },
+    { name: 'Medical', href: '/articles/medical' },
+    { name: 'Animals', href: '/articles/animals' },
+    { name: 'Devices', href: '/articles/devices' },
+];
+---
+
+<nav class="bg-gray-100 p-4 rounded-lg mb-8">
+    <ul class="flex flex-wrap gap-4">
+        {categories.map(category => (
+            <li>
+                <a 
+                    href={category.href}
+                    class="px-4 py-2 rounded-md hover:bg-purple-600 hover:text-white transition-colors"
+                >
+                    {category.name}
+                </a>
+            </li>
+        ))}
+    </ul>
+</nav>

@@ -1,0 +1,17 @@
+---
+interface Props {
+    text?: string;
+}
+
+const { text = "Learn More About Premium PEMF Devices" } = Astro.props;
+const affiliateLink = "https://resona.health?ap_id=star41";
+---
+
+<a
+    href={affiliateLink}
+    class="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    {text}
+</a>

@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTAButton from '../components/CTAButton.astro';
+---
+
+<Layout title="PEMF Therapy - Your Guide to Better Health">
+	<main class="max-w-6xl mx-auto px-4 py-12">
+		<h1 class="text-5xl font-bold text-center mb-8">
+			Discover the Power of PEMF Therapy
+		</h1>
+		<p class="text-xl text-center text-gray-600 mb-12">
+			Learn how Pulsed Electromagnetic Field therapy can enhance your wellness journey
+		</p>
+		
+		<div class="grid md:grid-cols-2 gap-12 mb-16">
+			<div class="bg-white p-8 rounded-lg shadow-lg">
+				<h2 class="text-2xl font-bold mb-4">What is PEMF Therapy?</h2>
+				<p class="text-gray-600 mb-4">
+					PEMF therapy uses electromagnetic fields to enhance cellular health, improve circulation,
+					and promote natural healing processes in the body.
+				</p>
+				<CTAButton text="Explore Premium PEMF Devices" />
+			</div>
+			
+			<div class="bg-white p-8 rounded-lg shadow-lg">
+				<h2 class="text-2xl font-bold mb-4">Benefits of PEMF</h2>
+				<ul class="list-disc list-inside text-gray-600 mb-4">
+					<li>Enhanced cellular repair and regeneration</li>
+					<li>Improved circulation and oxygenation</li>
+					<li>Better sleep and reduced stress</li>
+					<li>Accelerated recovery from exercise</li>
+				</ul>
+				<a href="/benefits" class="text-purple-600 hover:underline">Learn more about PEMF benefits →</a>
+			</div>
+		</div>
+
+		<div class="text-center mb-16">
+			<h2 class="text-3xl font-bold mb-6">Ready to Transform Your Health?</h2>
+			<p class="text-xl text-gray-600 mb-8">
+				Discover how premium PEMF devices can help you achieve optimal wellness
+			</p>
+			<CTAButton />
+		</div>
+	</main>
+</Layout>

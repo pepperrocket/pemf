@@ -1,0 +1,58 @@
+---
+import Footer from '../components/Footer.astro';
+
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const { title, description = "Learn about PEMF therapy devices and their benefits for health and wellness" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title} | PEMF Therapy Guide</title>
+    </head>
+    <body>
+        <header class="bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+            <nav class="max-w-6xl mx-auto px-4 py-6">
+                <div class="flex justify-between items-center">
+                    <a href="/" class="text-2xl font-bold">PEMF Therapy Guide</a>
+                    <div class="space-x-6">
+                        <a href="/" class="hover:text-purple-200">Home</a>
+                        <a href="/articles/general/what-is-pemf" class="hover:text-purple-200">Learn</a>
+                        <a href="/articles/devices/pemf-buying-guide" class="hover:text-purple-200">Devices</a>
+                        <a href="/about" class="hover:text-purple-200">About</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>
+<style is:global>
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+    }
+    html {
+        font-family: system-ui, sans-serif;
+        background: #fff;
+        color: #1a1a1a;
+    }
+    main {
+        max-width: 6xl;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+</style>
